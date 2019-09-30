@@ -22,13 +22,11 @@ public class Shinsu
             count += 1;
             if(n < 1){
                 sb.reverse();
-                for(int i = 0;i<count;i++){
-                    System.out.print(sb);
-                    if(i<count)
-                        System.exit(0);
-                }
+                System.out.print(sb);
+                System.exit(0);
             }
         }
     }
 }
+
 
