@@ -9,9 +9,14 @@ package p6;
  */
 public class Location
 {
+    String name;
     int keido,ido;
-    public Location(int b,int c){
+    public Location(String a,int b,int c){
+        this.name = a;
         this.keido = b;
         this.ido = c;
+    }
+    public String toString(){
+        return this.name +" "+ this.keido +" "+ this.ido;
     }
 }
