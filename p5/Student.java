@@ -31,4 +31,10 @@ public class Student
                "\t학번:"+ this.Student_id +
                "\t학점평균:" +this.grade +"\n";
     }
+    public String se(String i){
+        return "이름:"+ this.name +
+               "\t학과:"+ this.major +
+               "\t학번:"+ this.Student_id +
+               "\t학점평균:" +this.grade +"\n";
+    }
 }
