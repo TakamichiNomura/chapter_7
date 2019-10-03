@@ -28,5 +28,6 @@ public class p7
                 System.out.print(temp +" ");
             }
         }
+        s.close();
     }
 }
