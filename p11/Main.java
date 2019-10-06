@@ -1,6 +1,5 @@
 package p11;
 import java.util.*;
-
 /**
  * Write a description of class Main here.
  *
@@ -13,15 +12,14 @@ public class Main
         Scanner s = new Scanner(System.in);
         Nation nt;
         Vector<Nation> v = new Vector<Nation>();
+        ArrayList<String> array_name = new ArrayList<String>();
+        var array_capital = new ArrayList<String>();
         System.out.println(" *** 수도 맞추기 게임을 시작합니다.*** ");
         while(true){
             System.out.print("입력:1, 퀴즈:2, 종료:3>>");
             int num_1 = s.nextInt();
             int i = 0,j = 0;
-            ArrayList<String> array_name = new ArrayList<String>();
-            var array_capital = new ArrayList<String>();
-            switch(num_1){
-                case 1:
+            if(num_1 == 1){
                 System.out.println("현재 "+ v.size() +"개 나라와 수도가 입력되어 있습니다.");
                 while(true){
                     System.out.print("나라와 수도 입력"+ v.size() +">>");
@@ -41,10 +39,9 @@ public class Main
                     v.add(j,nt);
                     j++;
                 }
-                break;
-                case 2:
+            }else if(num_1 == 2){
                 while(true){
-                    int rand = (int)(Math.random()*array_name.size()+0);
+                    int rand = (int)(Math.random()*v.size() + 1);
                     System.out.print(array_name.get(rand) +"의 수도는?");
                     String name = s.next();
                     if(name.equals("그만")){
@@ -56,9 +53,9 @@ public class Main
                         System.out.println("아닙니다!!");
                     }
                 }
-                break;
-                case 3:
+            }else if(num_1 == 3){
                 System.out.println("시스템을 종료하겠습니다.");
+                s.close();
                 System.exit(0);
             }
         }
